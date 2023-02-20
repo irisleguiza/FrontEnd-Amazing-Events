@@ -4,10 +4,23 @@ body{
    max-width: 1600px;
    max-height: 224px;
     }
-.navbar.bg-body-tertiary{
+
+.nav.justify-content-center-carrusel{
+   background-color: #DE24A8 !important;
+   justify-content: space-between!important;
+   padding-left: 5%;
+   padding-right: 5%;
+   padding-top: 2%;
+   padding-bottom: 2%;
+    }
+.navbar-brand-carrusel{
+   color:white!important;
+   font-size: large;
+   font-weight: bold;
+   text-decoration: none; 
+}
+.navbar.bg-body-tertiary-category{
     background-color: #63F04A!important;
-    padding-left: 30px;
-    padding-right: 30px;
 }
 .navbar.bg-body-tertiary-header{
     padding-left: 30px;
@@ -17,30 +30,43 @@ body{
     background-color:#FF69D4!important;
     color:white !important;
     padding-left:20px;
-}
-
-.li.nav-item{
-    margin-right: 15px;
-    padding-left: 30px;
-}
-
+}  
 .nav-link{
+    background-color:#FF69D4!important;
+    color:white !important;
+    padding-left:20px;
+    border-radius: 0!important;
+}
+.ul.nav.nav-pills.nav-fill{
+    border-radius: 0!important;
+}
+.nav-pills{
+ border-radius: 0 !important;
+}
+.nav-link-footer{
     padding: 10px !important;
     margin: 30px!important;
     color:rgb(246, 180, 191)!important;
-    border-radius: 0!important;
 }
 .nav-link.active:hover{
     background-color:#63F04A!important;
     color:white!important;
-
+}
+.nav-link:hover{
+    background-color:#63F04A!important;
+    color:white!important;
 }
 .category{
     color:white;
-    padding:20px;
+}
+.container-fluid{
+    justify-content:space-evenly!important;
+    padding-left: 15%!important;
+    padding-right:15%!important ;
 }
 .form-check-label:before{
     border:solid #DE24A8!important;
+    
 }
 [type="checkbox"]:checked{
     background-color:#DE24A8!important;
@@ -93,10 +119,10 @@ body{
     text-decoration: none;
     border-radius: 10px;
     color:white;
+    margin-left: 10%;
     padding:5px;
-
+    font-size: 10px;
 }
-
 .contact{
     color:#DE24A8;
     margin-top: 5%;
@@ -104,14 +130,19 @@ body{
     margin-left: 25%;
     margin-right: 25%;
 }
+.form-control{
+    border: #63f04a !important;
+    background-color:#63f04a!important;
+    color:black!important;
+}
 .btn.btn{
     background-color: #DE24A8;
     color:white;
 }
 .table.table-striped.table-hover{
     color: black !important;
-    padding:20%;
-    margin-top: 4%;
+    padding:25%;
+    margin: 4%;
     border-color: #DE24A8;
 }
 th{
@@ -122,6 +153,7 @@ th{
     padding:5%;
     display:flex;
     justify-content: center;
+    background-color: #63F04A;
 }
 .card-body-details{
     background-color: white!important;
@@ -131,7 +163,6 @@ th{
 .card-text-details{
     color:#DE24A8;
 }
-
 .nav-social{
     width: 30px;
     height: 30px;
@@ -147,6 +178,7 @@ th{
     text-decoration: none;
 } 
 footer{
-    font-size: 20px;
+    font-size: 15px;
     padding:20px;
 }
+
