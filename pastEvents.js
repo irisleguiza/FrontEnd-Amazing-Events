@@ -1,7 +1,7 @@
 
 function printPastEvents(){
     let events=data.events
-    let currentDate= date.currentDate
+    let currentDate= data.currentDate
     let templates=[]
 
     for (let past of events) {
