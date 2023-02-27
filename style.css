@@ -15,9 +15,10 @@ body{
     }
 .navbar-brand-carrusel{
    color:white!important;
-   font-size: large;
+   font-size: 30px;
    font-weight: bold;
-   text-decoration: none; 
+   text-decoration: none;
+
 }
 .navbar.bg-body-tertiary-category{
     background-color: #63F04A!important;
@@ -59,6 +60,9 @@ body{
 .category{
     color:white;
 }
+.form-control.me-2{
+    background-color: white !important;
+}
 .container-fluid{
     justify-content:space-evenly!important;
     padding-left: 15%!important;
@@ -82,14 +86,19 @@ body{
     background-color:#DE24A8!important;
     color:white;
 }
-.events1{
+.row.row-cols-1.row-cols-md-3.g-4{
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.events2{
-    padding-bottom: 50px;
-}
 .card{
+    margin-left:20px;
+    margin-right: 20px;
+}
+.cardPast{
+    margin-left:20px;
+    margin-right: 20px;
+}
+.cardUpcoming{
     margin-left:20px;
     margin-right: 20px;
 }
