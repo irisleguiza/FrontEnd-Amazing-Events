@@ -160,6 +160,7 @@ th{
 }
 .details-card{
     padding:5%;
+    padding-bottom: 20%;
     display:flex;
     justify-content: center;
     background-color: #63F04A;

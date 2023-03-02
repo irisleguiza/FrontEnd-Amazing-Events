@@ -1,6 +1,6 @@
 
 function printPastEvents(){
-    let events=data.events
+    let events= data.events
     let currentDate= data.currentDate
     let templates=[]
 
