@@ -7,7 +7,7 @@ function printUpcomingEvents(){
     for(let future of events) {
         if (future.date > currentDate){
             console.log(future)
-            templates.push(template(future.image,future.name,future.description,future.price))
+            templates.push(template(future.image,future.name,future.description,future.price,future._id))
         }    
             console.log(templates)
     }

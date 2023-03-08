@@ -20,8 +20,13 @@ body{
    text-decoration: none;
 
 }
+#checks-container.navbar.bg-body-tertiary-category{
+    display:flex;
+    flex-direction: row;
+}
 .navbar.bg-body-tertiary-category{
     background-color: #63F04A!important;
+    padding:2%;
 }
 .navbar.bg-body-tertiary-header{
     padding-left: 30px;
@@ -60,6 +65,8 @@ body{
 .category{
     color:white;
 }
+
+
 .form-control.me-2{
     background-color: white !important;
 }
@@ -126,11 +133,28 @@ body{
 .details{
     background-color:#63F04A;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 5px;
     color:white;
     margin-left: 10%;
     padding:5px;
-    font-size: 10px;
+    font-size: 13px;
+}
+.card-title-details{
+    color: black !important;
+}
+.text-price{
+    color: #63f04a !important;
+    font-weight: bold !important;;
+}
+.d-flex{
+    background-color:#63F04A;
+    text-decoration: none;
+    border-radius: 5px;
+    color:white;
+    padding-left:20%;
+    padding-right: 20%;
+    padding-bottom: 2%;
+    font-size: 13px;
 }
 .contact{
     color:#DE24A8;
@@ -150,6 +174,7 @@ body{
 }
 .table.table-striped.table-hover{
     color: black !important;
+    max-width: 92%;
     padding:25%;
     margin: 4%;
     border-color: #DE24A8;
@@ -158,6 +183,7 @@ th{
     background-color: #63F04A!important;
     color:black!important;
 }
+
 .details-card{
     padding:5%;
     padding-bottom: 20%;
