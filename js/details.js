@@ -25,10 +25,10 @@ function cardDetails(dato){
 }
 
 function printDetails(id, dato, array_data){
-    let container= document.querySelector(id);
-    let otherDato= array_data.find(each => each._id == dato);
-    let details=cardDetails(otherDato);
-    container.innerHTML=details;
+    let container= document.querySelector(id)
+    let otherDato= array_data.find(each => each._id == dato)
+    let details=cardDetails(otherDato)
+    container.innerHTML=details
 }
 
-printDetails(`#card-details`,id_query, datos);
+printDetails(`#card-details`,id_query, datos)
