@@ -31,4 +31,4 @@ function printDetails(id, dato, array_data){
     container.innerHTML=details
 }
 
-printDetails(`#card-details`,id_query, datos)
+printDetails(`#card-details`,id_query,datos)

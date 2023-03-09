@@ -4,7 +4,7 @@ function printPastEvents(){
     let currentDate= data.currentDate
     let templates=[]
 
-    for (let past of events) {
+    for(let past of events) {
         if (past.date < currentDate){
             console.log(past)
             templates.push(template(past.image,past.name,past.description,past.price,past._id))
@@ -16,4 +16,4 @@ function printPastEvents(){
 
 }
 
-printPastEvents()
+printPastEvents();

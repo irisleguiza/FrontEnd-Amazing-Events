@@ -16,4 +16,4 @@ function printUpcomingEvents(){
 
 }
 
-printUpcomingEvents()
+printUpcomingEvents();
