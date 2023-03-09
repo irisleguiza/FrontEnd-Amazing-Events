@@ -1,4 +1,4 @@
- let templateFilt=(data)=>{
+let templateFilt=(data)=>{
   return`
     <div class="col">
       <div class="card h-100">
@@ -12,29 +12,32 @@
             <a class= "details" href="./details.html?_id=${_id}" title="${data.name}">See More</a>
         </div>
       </div>
-    </div>`
+    </div>
+    `
   }
 
- let printFilter=(id_html,array_events)=>{
+  let printFilter=(id_html,array_events) =>{
     let selector=document.querySelector(`#${id_html}`)
     let templates=array_events.map(templateFilt).join("")
     selector.innerHTML=templates
-    console.log(templates)
+    // console.log(templates)
    }
 
-  let captureData=(id_text,id_checks, array_events)=>{
+  let captureData=(id_text, id_checks, array_events)=>{
      let inputText=document.querySelector(`#${id_text}`).value
-     let inputChecks=Array.from(document.querySelectorAll(`#id_checks:checked`)).map(each=>each.value)
+     let inputChecks=Array.from(document.querySelectorAll(`.${id_checks}:checked`)).map(each=>each.value)
+     
+      // console.log (inputText)
 
-     let eventFilter=array_events.filter(each=>{
+  let eventFilter= array_events.filter(each =>{
        return(
-          (each.name.toLowerCase().includes(inputText.toLowerCase().trim()))
+          (each.name.includes(inputText))
      &&
-          (inputChecks.length===0 || inputChecks.incluides(each.category))
+          (inputChecks.length === 0 || inputChecks.includes(each.category))
       )
  })
-  console.log(eventFilter)
-  printFilter("card-events",eventFilter)
+  // console.log(eventFilter)
+   printFilter("card-events", eventFilter)
  }
-
+  
   document.querySelector("#name").addEventListener("keyup", ()=> captureData("name","form-check-input", data.events))

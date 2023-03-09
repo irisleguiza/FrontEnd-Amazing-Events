@@ -6,10 +6,10 @@ let id_query=params.get(`_id`)
 
 function cardDetails(dato){
     return`
-        <div class="card mb-3" style="max-width:70%; max-heigth:40%;">
+        <div class="card mb-3" style="max-width:70%; max-heigth:40%">
           <div class="row g-0">     
               <div class="col-md-4">
-                 <img src=${dato.image} class="img-fluid rounded-start"></>
+                 <img src="${dato.image}" class="img-fluid rounded-start"></>
               </div>
               <div class="col-md-8">
                 <div class="card-body-details">
