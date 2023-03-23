@@ -20,9 +20,11 @@ body{
    text-decoration: none;
 
 }
-#checks-container.navbar.bg-body-tertiary-category{
+nav#checks-container.navbar.bg-body-tertiary-category{
     display:flex;
-    flex-direction: row;
+    flex-direction: row!important;
+    justify-content: space-between!important;
+    align-items: center;
 }
 .navbar.bg-body-tertiary-category{
     background-color: #63F04A!important;
@@ -65,8 +67,23 @@ body{
 .category{
     color:white;
 }
-
-
+.filters{
+    background-color:#63F04A;
+    color:#DE24A8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1%;
+}
+.form-check-label{
+    padding-right: 5px;
+}
+.form-control-search{
+    background-color: white !important;
+    color:#DE24A8!important;
+    border-radius: 2%;
+    border-color: #DE24A8;
+}
 .form-control.me-2{
     background-color: white !important;
 }
@@ -133,10 +150,12 @@ body{
 .details{
     background-color:#63F04A;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     color:white;
     margin-left: 10%;
-    padding:5px;
+    padding-left:10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
     font-size: 13px;
 }
 .card-title-details{
@@ -183,7 +202,9 @@ th{
     background-color: #63F04A!important;
     color:black!important;
 }
-
+.table#tableJs.table{
+    padding:3%;
+}
 .details-card{
     padding:5%;
     padding-bottom: 20%;

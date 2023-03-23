@@ -1,34 +1,92 @@
-let datos=data.events;
-let query= location.search
-let params= new URLSearchParams(query)
-let id_query=params.get(`_id`)
+let details = document.getElementById("card-details");
 
-
-function cardDetails(dato){
-    return`
-        <div class="card mb-3" style="max-width:70%; max-heigth:40%">
-          <div class="row g-0">     
-              <div class="col-md-4">
-                 <img src="${dato.image}" class="img-fluid rounded-start"></>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body-details">
-                <h4 class="card-title-details">${dato.name}</h4>
-                <h5 class="text-price"> Price $${dato.price}</h5>
-                <h6 class="text-place">Place: ${dato.place}</h6>
-                <p class="card-text-details">${dato.date}</p>
-                <p class="card-text-details">${dato.description}</p>
-                </div>
-              </div>
-          </div>
-        </div>`
+function idPrinter(i, container) {
+  container.innerHTML +=
+    `
+        <article class="only_card" >
+        <img
+          src="${i.image}"
+          class="card-img2"
+          alt="${i.name}"
+        />
+        <div class="card-body2">
+            <h5 class="card-title2">${i.name}</h5>
+            <p class="card-text2">
+            Date: ${i.date}
+            </p>
+            <p class="card-text2">
+            Place: ${i.place}
+            </p>
+            <p class="card-text2">
+            Category: ${i.category}
+            </p>
+            <p class="card-text2">
+            Category: ${i.capacity}
+            </p>
+            <p class="card-text2">
+            Assistance: ${i.assistance}
+            </p>
+          <div class="buttons-cardsx">
+          <button class="btn btn-dark">U$D${i.price}</button>
+          <a href="#" class="btn btn-danger">Buy</a>
+        </div>
+        </div>
+      </article>
+        `
 }
 
-function printDetails(id, dato, array_data){
-    let container= document.querySelector(id)
-    let otherDato= array_data.find(each => each._id == dato)
-    let details=cardDetails(otherDato)
-    container.innerHTML=details
+function idPrinter2(i, container) {
+  container.innerHTML += `
+        <article class="only_card" >
+        <img
+          src="${i.image}"
+          class="card-img2"
+          alt="${i.name}"
+        />
+        <div class="card-body2">
+            <h5 class="card-title2">${i.name}</h5>
+            <p class="card-text2">
+            Date: ${i.date}
+            </p>
+            <p class="card-text2">
+            Place: ${i.place}
+            </p>
+            <p class="card-text2">
+            Category: ${i.category}
+            </p>
+            <p class="card-text2">
+            Category: ${i.capacity}
+            </p>
+            <p class="card-text2" id="hideDiv">
+            Estimate: ${i.estimate}
+            </p>
+          <div class="buttons-cardsx">
+          <button class="btn btn-dark">U$D${i.price}</button>
+          <a href="#" class="btn btn-danger">Buy</a>
+        </div>
+        </div>
+      </article>
+        `
 }
+let dia
+let eventos
 
-printDetails(`#card-details`,id_query,datos)
+fetch(' https://mindhub-ab35.onrender.com/api/amazing-events')
+  .then(data => data.json())
+  .then(data => {
+    dia = data.date
+    eventos = data.events
+    printid()
+  })
+ 
+
+  function printid() {
+  let theId = location.search.slice(4)
+  let filtro = eventos.find(e => e.id === theId)
+  if (filtro.date < dia) {
+    idPrinter(filtro, details)
+  }
+  else {
+    idPrinter2(filtro, details)
+  }
+}  
